@@ -20,7 +20,7 @@ public class FootballManagerController implements Action{
                 try {
                     this.view.addFootballer();
                 } catch (Exception e1) {
-                    JOptionPane.showMessageDialog(this.view, "Please enter all field!");
+                    JOptionPane.showMessageDialog(this.view, "Cannot add or update footballer!");
                 }
                 break;
             case "Delete":

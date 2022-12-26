@@ -2,7 +2,7 @@ package test;
 
 import com.assignment.FootballManagerView;
 
-import javax.swing.UIManager;
+import javax.swing.*;
 
 public class Test {
 	public static void main(String[] args) {
@@ -10,7 +10,11 @@ public class Test {
 			UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
 			new FootballManagerView();
 		} catch (Exception e) {
-			e.printStackTrace();
+			JFrame error = new JFrame();
+			JOptionPane box = new JOptionPane("Cannot open the program");
+			error.add(box);
+			error.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+			error.setVisible(true);
 		}
 	}
 }

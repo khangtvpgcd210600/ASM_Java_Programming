@@ -33,7 +33,11 @@ public class FootballManagerView extends JFrame {
                     FootballManagerView frame = new FootballManagerView();
                     frame.setVisible(true);
                 } catch (Exception e) {
-                    e.printStackTrace();
+                    JFrame error = new JFrame();
+                    JOptionPane box = new JOptionPane("Cannot open the program");
+                    error.add(box);
+                    error.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+                    error.setVisible(true);
                 }
             }
         });
