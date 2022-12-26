@@ -2,7 +2,6 @@ package com.assignment;
 
 import java.awt.event.*;
 import java.beans.*;
-import java.util.*;
 import javax.swing.*;
 public class FootballManagerController implements Action{
     public FootballManagerView view;

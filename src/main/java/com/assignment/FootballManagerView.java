@@ -295,8 +295,6 @@ public class FootballManagerView extends JFrame {
         this.textField_Price.setText(footballer.getPrice() + "");
     }
 
-
-
     public void addFootballer() {
         int footballerId = Integer.valueOf(this.textField_FootballerID.getText());
         String name = this.textField_Name.getText();
@@ -346,8 +344,6 @@ public class FootballManagerView extends JFrame {
         }
     }
 
-
-
     public void deleteFootballer() {
         DefaultTableModel model_table = (DefaultTableModel) table.getModel();
         int i_row = table.getSelectedRow();
@@ -366,7 +362,6 @@ public class FootballManagerView extends JFrame {
         textField_Price.setText("");
         comboBox_Club.setSelectedIndex(-1);
     }
-
 
     public void seachFootballer() {
         this.reloadData();
@@ -403,7 +398,7 @@ public class FootballManagerView extends JFrame {
                     try {
                         model_table.removeRow(i);
                     } catch (Exception e) {
-                        e.printStackTrace();
+                        JOptionPane.showMessageDialog(this, "Cannot remove row when searching footballers");
                     }
                     break;
                 }
